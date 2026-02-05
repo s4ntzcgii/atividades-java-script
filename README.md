@@ -1,1 +1,10 @@
 # atividades-java-script
+
+ATIVIDADE 1:
+Este projeto consiste em uma página HTML simples que utiliza JavaScript para capturar o nome do usuário por meio da função window.prompt() e exibir uma mensagem de boas-vindas personalizada usando document.write(). O código tem finalidade exclusivamente educacional, sendo voltado para iniciantes, e trabalha conceitos básicos como estrutura HTML, declaração de variáveis, entrada e saída de dados no navegador. Apesar de funcional, utiliza práticas consideradas ultrapassadas em projetos modernos, como o uso de var, document.write() e do atributo language na tag <script>, justamente para fins didáticos e de introdução ao JavaScript.
+
+ATIVIDADE 2: 
+Este projeto apresenta um exemplo simples de formulário em HTML integrado com JavaScript para capturar o nome e o sobrenome do usuário, concatenar esses dados e exibir uma saudação personalizada por meio de uma janela de alerta. O código tem finalidade didática e demonstra conceitos básicos como criação de formulários, uso de campos de entrada (input), manipulação de dados via document.forms, declaração de variáveis em JavaScript e processamento de strings por concatenação. A saída é feita com window.alert(), reforçando a noção de interação direta com o usuário. Apesar de funcional, o código utiliza práticas introdutórias e antigas, adequadas apenas para aprendizado inicial e não recomendadas para aplicações modernas.
+
+ATIVIDADE 3: 
+Este projeto demonstra um exemplo básico de JavaScript integrado ao HTML para realizar a soma de dois números inteiros informados pelo usuário. O programa solicita os valores por meio de janelas de entrada (window.prompt()), converte os dados de texto para números inteiros utilizando parseInt(), realiza o cálculo da soma e exibe o resultado diretamente na página com document.write(). O código tem finalidade didática e trabalha conceitos introdutórios como declaração de variáveis, entrada, processamento e saída de dados no JavaScript. Apesar de funcional, utiliza práticas simples e antigas, sendo indicado apenas para aprendizado inicial e não para aplicações modernas.
