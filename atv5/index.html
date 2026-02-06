@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculadora de intervalo entre datas</title>
+    <title>Calculadora de Intervalo entre Datas</title>
 
-    <!--estilos visuais da pagina-->
+    <!-- Estilos visuais da página -->
     <style>
-        body{
+        body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             padding: 20px;
             text-align: center;
         }
 
-        h1{
+        h1 {
             color: #333;
         }
 
-        label{
+        label {
             font-weight: bold;
             display: block;
             margin-top: 10px;
         }
 
-        input{
+        input {
             padding: 5px;
             margin: 5px;
         }
 
-        /*estilo de botões*/
-        button{
+        /* Estilo dos botões */
+        button {
             margin-top: 15px;
             padding: 8px 20px;
             background-color: #333;
@@ -40,118 +40,113 @@
             cursor: pointer;
         }
 
-        button:hover{
+        button:hover {
             background-color: #555;
         }
 
-        /*estilo de botao de limpar (cinza)*/
-        .btn-limpar{
+        /* Estilo do botão de limpar (cinza) */
+        .btn-limpar {
             background-color: #888;
         }
 
-        /*area de resultado*/
+        /* Área de resultado */
         #resultado {
             margin-top: 20px;
             background: white;
             padding: 15px;
             border-radius: 8px;
             display: inline-block;
-            box-shadow: 0 0 5px rgba(0,0,0,0,1);
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
         }
     </style>
-    </head>
+</head>
 
 <body>
-    <h1>📅 calculadora de intervalo entre datas</h1>
 
-    <!-- ====== AREA DE ENTRADA DE DATAS ======-->
-     <label for="data1">digite a primeira data:</label>
-     <input type="date" id="data1">
+    <h1>🗓️ Calculadora de Intervalo entre Datas</h1>
 
-     <label for="data2">digite a segunda data:</label>
-     <input type="date" id:"data2">
+    <!-- Área de entrada de datas -->
+    <label for="data1">Digite a primeira data:</label>
+    <input type="date" id="data1">
 
-     <!--botoes de ação-->
-     <br>
-     <button onclick="calcularIntervalo()">calcular intervalo</button>
-     <button class="btn-limpar" onclick="limparCampos()">limpar campos</button>
+    <label for="data2">Digite a segunda data:</label>
+    <input type="date" id="data2">
 
-     <!--onde o resultado ser exibido-->
-     <div id="resultado"></div>
+    <!-- Botões de ação -->
+    <br><br>
+    <button onclick="calcularIntervalo()">Calcular Intervalo</button>
+    <button class="btn-limpar" onclick="limparCampos()">Limpar Campos</button>
 
-     <script>
-        /**
-         * ======================================
-         * função: calcularIntervalo()
-         * objetivo: calcular a diferença entre duas datas
-         * e mostrar o intervalo em dias, meses e anos
-         * ======================================
-         */
-         function calcularIntervalo() {
+    <!-- Onde o resultado será exibido -->
+    <div id="resultado"></div>
 
-            //1️⃣ captura os valores informados pelo usuario
+    <script>
+        /*
+        =====================================================
+        Função: calcularIntervalo()
+        Objetivo: Calcular a diferença entre duas datas
+        e mostrar o intervalo em dias, meses e anos.
+        =====================================================
+        */
+        function calcularIntervalo() {
+
+            // Captura os valores informados pelo usuário
             const data1 = document.getElementById("data1").value;
             const data2 = document.getElementById("data2").value;
 
-            //2️⃣ varifica se os dois campos foram preenchidos
+            // Verifica se os dois campos foram preenchidos
             if (!data1 || !data2) {
                 document.getElementById("resultado").innerHTML =
-                "<strong style='color:red;'>⚠️ por favor, preencha as duas datas antes de calcular!</strong>";
-                return; // interrompe a função se faltar alguma data
+                    "<strong style='color:red;'>⚠️ Por favor, preencha as duas datas antes de calcular!</strong>";
+                return; // Interrompe a função se faltar alguma data
             }
 
-            // 3️⃣ converte as strings recebidas em objetos do tipo date
-            const d1 = new Date(data1);
-            const d2 = new Date(data2);
+            // Converte as strings recebidas em objetos do tipo Date
+            const dataInicial = new Date(data1);
+            const dataFinal = new Date(data2);
 
-            // 4️⃣ calcula a diferença entre as datas em milissegundos
-            // a subtração entre dois objetos Dtae retorna o intervalo em milissegundos
-            const diffEmMs = Math.abd(d2 - d1); //Math.abs() garate valor positivo
+            // Calcula a diferença entre as datas em milissegundos
+            const diffEmMs = Math.abs(dataFinal - dataInicial);
 
-            /**
-             * 🔍 EXPLICAÇÃO:
-             * 1 segundo = 1000 milissegundos
-             * 1 minuto  = 60 segundos
-             * 1 hora    = 60 minutos
-             * 1 dia     = 24 horas
-             * logo, 1 dia = 1000 * 60 * 60 * 24 milissegundos
-              */
-             const diffEmDias = Math.floor(diffEmMs / (1000 * 60 * 60 * 24));
+            /*
+            Conversões:
+            1 segundo = 1000 milissegundos
+            1 minuto = 60 segundos
+            1 hora = 60 minutos
+            1 dia = 24 horas
+            Logo, 1 dia = 1000 * 60 * 60 * 24 milissegundos
+            */
+            const diffEmDias = Math.floor(diffEmMs / (1000 * 60 * 60 * 24));
 
-             /**
-              * converte dias em meses e anos de forma aproximada.
-              * OBS: essa aproximação considera 30 dias por mes e 12 meses por ano.
-              * é suficiente para fins didaticos
-              */ 
-             const  diffEmMeses = Math.floor(diffEmDias / 30);
-             const diffEmAnos = Math.floor(diffEmMeses / 12);
+            // Conversões aproximadas de dias para meses e anos
+            // OBS: Essas aproximações consideram 30 dias por mês e 12 meses por ano
+            const diffEmMeses = Math.floor(diffEmDias / 30);
+            const diffEmAnos = Math.floor(diffEmMeses / 12);
 
-             // 5️⃣ exibe os resultados na tela dentro da div "resultado"
-             document.getElementById("resultado").innerHTML = `
-             <h3>🕐 resultado:</h3> 
-             <p><strong>Diferença em dias:</strong> ${diffEmDiass} dias</p>
-             <p><strong>Diferença em meses (aproximado):</strong> ${diffEmMeses} meses</p>
-             <p><strong>Diferença em anos (aproximado):</strong> ${diffEmAnos} anos</p>
+            // Exibe os resultados na tela dentro da div "resultado"
+            document.getElementById("resultado").innerHTML = `
+                <h3>⏱️ Resultado:</h3>
+                <p><strong>Diferença em dias:</strong> ${diffEmDias} dias</p>
+                <p><strong>Diferença em meses (aproximado):</strong> ${diffEmMeses} meses</p>
+                <p><strong>Diferença em anos (aproximado):</strong> ${diffEmAnos} anos</p>
             `;
-         }
+        }
 
-         /**
-          * ===================================
-          * função: limparCampos()
-          * objetivo: limpar os campos de data e o resultado
-          * ===================================
-          */
-         function limparCampos() {
-            //apaga os valores digitados nos inputs
+        /*
+        =====================================================
+        Função: limparCampos()
+        Objetivo: Limpar os campos de data e o resultado
+        =====================================================
+        */
+        function limparCampos() {
             document.getElementById("data1").value = "";
             document.getElementById("data2").value = "";
-
-            //limpa o conteudo da area do resultado
             document.getElementById("resultado").innerHTML = "";
 
-            //(opcional) foca novamente no primeiro campo
+            // Opcional: foca novamente no primeiro campo
             document.getElementById("data1").focus();
-         }
-     </script>
+        }
+    </script>
+
 </body>
 </html>
