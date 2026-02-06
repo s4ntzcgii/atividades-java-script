@@ -14,3 +14,6 @@ Este projeto é uma simulação simples de uma máquina de sucos feita com HTML 
 
 ATIVIDADE 5: 
 Este projeto é uma calculadora simples feita com HTML, CSS e JavaScript que calcula o intervalo entre duas datas informadas pelo usuário. Após o preenchimento das datas, o sistema valida os campos e calcula a diferença total em dias, além de apresentar uma conversão aproximada desse intervalo em meses e anos. O resultado é exibido diretamente na tela, e o usuário pode limpar os campos para realizar um novo cálculo. O projeto tem finalidade didática, focando no uso de datas, manipulação do DOM e lógica básica em JavaScript, sem considerar variações reais de meses ou anos bissextos.
+
+ATIVIDADE 6:
+Este projeto é um gerador de personagens de RPG desenvolvido para uma página web interativa. O sistema utiliza JavaScript para solicitar ao usuário, por meio de janelas de diálogo, o nome do personagem, sua classe e sua principal habilidade. Com essas informações, o script cria uma frase de impacto que apresenta o herói de forma narrativa, simulando sua entrada em uma taverna ou guilda virtual. O resultado final é exibido diretamente no corpo da página HTML, permitindo que todos os jogadores visualizem a introdução do personagem.
