@@ -11,3 +11,6 @@ Este projeto demonstra um exemplo básico de JavaScript integrado ao HTML para r
 
 ATIVIDADE 4:
 Este projeto é uma simulação simples de uma máquina de sucos feita com HTML e JavaScript puro, onde o usuário pode escolher uma ou mais frutas, definir o líquido base (água ou leite) e optar por adicionar açúcar. O sistema permite selecionar todas as frutas automaticamente, valida se pelo menos uma fruta foi escolhida antes de preparar o suco e exibe o resultado final com as escolhas do usuário por meio de um alerta. Todo o código está concentrado em um único arquivo HTML com JavaScript embutido, tendo como objetivo principal o aprendizado de manipulação do DOM, eventos, validações e uso de seleção múltipla, sem foco em design ou escalabilidade.
+
+ATIVIDADE 5: 
+Este projeto é uma calculadora simples feita com HTML, CSS e JavaScript que calcula o intervalo entre duas datas informadas pelo usuário. Após o preenchimento das datas, o sistema valida os campos e calcula a diferença total em dias, além de apresentar uma conversão aproximada desse intervalo em meses e anos. O resultado é exibido diretamente na tela, e o usuário pode limpar os campos para realizar um novo cálculo. O projeto tem finalidade didática, focando no uso de datas, manipulação do DOM e lógica básica em JavaScript, sem considerar variações reais de meses ou anos bissextos.
