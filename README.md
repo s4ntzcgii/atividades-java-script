@@ -17,3 +17,6 @@ Este projeto é uma calculadora simples feita com HTML, CSS e JavaScript que cal
 
 ATIVIDADE 6:
 Este projeto é um gerador de personagens de RPG desenvolvido para uma página web interativa. O sistema utiliza JavaScript para solicitar ao usuário, por meio de janelas de diálogo, o nome do personagem, sua classe e sua principal habilidade. Com essas informações, o script cria uma frase de impacto que apresenta o herói de forma narrativa, simulando sua entrada em uma taverna ou guilda virtual. O resultado final é exibido diretamente no corpo da página HTML, permitindo que todos os jogadores visualizem a introdução do personagem.
+
+ATIVIDADE 7:
+Este projeto apresenta um protótipo de acessibilidade e conforto visual para o portal de notícias TechNews, criado para reduzir o cansaço visual dos usuários durante a leitura noturna. A página permite alternar entre modo claro e modo escuro, oferecendo melhor adaptação às diferentes condições de iluminação. A funcionalidade é implementada com JavaScript, que modifica dinamicamente as cores do corpo e dos textos da página por meio de botões de interação. O foco do projeto é demonstrar a aplicação prática de manipulação do DOM e a importância da acessibilidade visual na experiência do usuário.
